@@ -1,33 +1,67 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
-  title: "SYNERTEL | Tecnología en Sinergia",
+  title: {
+    default: "SYNERTEL | Tecnología en Sinergia",
+    template: "%s | SYNERTEL",
+  },
+
   description:
-    "SYNERTEL GROUP S.A.C.S. Especialistas en Telecomunicaciones, Ciberseguridad, Centros C5, Smart Cities y Transformación Digital.",
+    "SYNERTEL GROUP S.A.C.S. desarrolla soluciones en Telecomunicaciones, Centros C5, Ciberseguridad, Smart Cities, Transformación Digital y Obras por Impuestos.",
+
   keywords: [
     "SYNERTEL",
     "Telecomunicaciones",
     "Centros C5",
-    "Smart Cities",
+    "C5",
+    "Smart City",
     "Ciberseguridad",
-    "Obras por Impuestos",
     "Transformación Digital",
+    "Fibra Óptica",
+    "Obras por Impuestos",
     "Perú",
   ],
+
+  authors: [
+    {
+      name: "SYNERTEL GROUP S.A.C.S.",
+    },
+  ],
+
+  creator: "SYNERTEL GROUP S.A.C.S.",
+
+  metadataBase: new URL("https://synertelgrp.com"),
+
+  openGraph: {
+    title: "SYNERTEL | Tecnología en Sinergia",
+    description:
+      "Ingeniería para un mundo conectado.",
+    url: "https://synertelgrp.com",
+    siteName: "SYNERTEL",
+    locale: "es_PE",
+    type: "website",
+    images: [
+      {
+        url: "/images/hero/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "SYNERTEL | Tecnología en Sinergia",
+    description: "Ingeniería para un mundo conectado.",
+    images: ["/images/hero/hero-bg.jpg"],
+  },
+
+  icons: {
+    icon: "/images/logos/logo-synertel.png",
+    shortcut: "/images/logos/logo-synertel.png",
+    apple: "/images/logos/logo-synertel.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,11 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
   );
 }
