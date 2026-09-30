@@ -4,13 +4,10 @@ import Container from "./Container";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-xl">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between">
-
         {/* Logo */}
-
         <Link href="/" className="flex items-center gap-3">
-
           <Image
             src="/images/logos/logo-synertel.png"
             alt="SYNERTEL"
@@ -20,7 +17,6 @@ export default function Navbar() {
           />
 
           <div className="leading-tight">
-
             <h2 className="text-lg font-bold tracking-wider text-white">
               SYNERTEL
             </h2>
@@ -28,15 +24,11 @@ export default function Navbar() {
             <p className="text-xs text-sky-400">
               Tecnología en Sinergia
             </p>
-
           </div>
-
         </Link>
 
         {/* Menú */}
-
-        <nav className="hidden lg:flex items-center gap-10 text-sm font-medium text-slate-300">
-
+        <nav className="hidden items-center gap-10 text-sm font-medium text-slate-300 lg:flex">
           <Link
             href="/"
             className="transition hover:text-sky-400"
@@ -71,7 +63,6 @@ export default function Navbar() {
           >
             Contacto
           </Link>
-
         </nav>
 
         <Link
@@ -80,7 +71,6 @@ export default function Navbar() {
         >
           Solicitar Consultoría
         </Link>
-
       </Container>
     </header>
   );

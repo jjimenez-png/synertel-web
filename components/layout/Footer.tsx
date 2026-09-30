@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "./Container";
 
 export default function Footer() {
@@ -6,25 +7,28 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-slate-800 bg-slate-950">
-      <Container className="py-16">
+      <Container className="py-14">
 
-        <div className="grid gap-12 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* Empresa */}
-
+          {/* =====================================================
+              SYNERTEL
+          ===================================================== */}
           <div>
 
-            <div className="flex items-center gap-4">
-
+            <Link
+              href="/"
+              className="flex items-center gap-4"
+            >
               <Image
                 src="/images/logos/logo-synertel.png"
                 alt="SYNERTEL"
-                width={48}
-                height={48}
+                width={52}
+                height={52}
+                className="h-[52px] w-[52px] object-contain"
               />
 
               <div>
-
                 <h3 className="text-xl font-bold text-white">
                   SYNERTEL
                 </h3>
@@ -32,12 +36,10 @@ export default function Footer() {
                 <p className="text-sm text-sky-400">
                   Tecnología en Sinergia
                 </p>
-
               </div>
+            </Link>
 
-            </div>
-
-            <p className="mt-6 leading-8 text-slate-400">
+            <p className="mt-6 max-w-sm text-sm leading-7 text-slate-400">
               Ingeniería, telecomunicaciones, ciberseguridad,
               Centros C5, Smart Cities y transformación digital
               para entidades públicas y empresas privadas.
@@ -45,71 +47,174 @@ export default function Footer() {
 
           </div>
 
-          {/* Servicios */}
-
+          {/* =====================================================
+              SERVICIOS
+          ===================================================== */}
           <div>
 
-            <h4 className="text-lg font-semibold text-white">
+            <h4 className="text-base font-semibold text-white">
               Servicios
             </h4>
 
-            <ul className="mt-6 space-y-3 text-slate-400">
+            <ul className="mt-6 space-y-3 text-sm text-slate-400">
 
-              <li>Telecomunicaciones</li>
-              <li>Ciberseguridad</li>
-              <li>Centros C5</li>
-              <li>Smart Cities</li>
-              <li>Transformación Digital</li>
-              <li>Obras por Impuestos</li>
+              <li>
+                <Link
+                  href="/#capacidades"
+                  className="transition hover:text-sky-400"
+                >
+                  Telecomunicaciones
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/fortinet"
+                  className="transition hover:text-sky-400"
+                >
+                  Ciberseguridad
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#c5"
+                  className="transition hover:text-sky-400"
+                >
+                  Centros C5
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#capacidades"
+                  className="transition hover:text-sky-400"
+                >
+                  Smart Cities
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#capacidades"
+                  className="transition hover:text-sky-400"
+                >
+                  Transformación Digital
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#capacidades"
+                  className="transition hover:text-sky-400"
+                >
+                  Obras por Impuestos
+                </Link>
+              </li>
 
             </ul>
 
           </div>
 
-          {/* Empresa */}
-
+          {/* =====================================================
+              EMPRESA
+          ===================================================== */}
           <div>
 
-            <h4 className="text-lg font-semibold text-white">
+            <h4 className="text-base font-semibold text-white">
               Empresa
             </h4>
 
-            <ul className="mt-6 space-y-3 text-slate-400">
+            <ul className="mt-6 space-y-3 text-sm text-slate-400">
 
-              <li>Nosotros</li>
-              <li>Proyectos</li>
-              <li>Biblioteca</li>
-              <li>Contacto</li>
+              <li>
+                <Link
+                  href="/nosotros"
+                  className="transition hover:text-sky-400"
+                >
+                  Nosotros
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#proyectos"
+                  className="transition hover:text-sky-400"
+                >
+                  Proyectos
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#contacto"
+                  className="transition hover:text-sky-400"
+                >
+                  Biblioteca
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/#contacto"
+                  className="transition hover:text-sky-400"
+                >
+                  Contacto
+                </Link>
+              </li>
 
             </ul>
 
           </div>
 
-          {/* Contacto */}
-
+          {/* =====================================================
+              CONTACTO
+          ===================================================== */}
           <div>
 
-            <h4 className="text-lg font-semibold text-white">
+            <h4 className="text-base font-semibold text-white">
               Contacto
             </h4>
 
-            <p className="mt-6 text-slate-400">
+            <a
+              href="mailto:ventas@synertelgrp.com"
+              className="mt-6 block text-sm text-slate-400 transition hover:text-sky-400"
+            >
               ventas@synertelgrp.com
-            </p>
+            </a>
 
-            <p className="mt-3 text-slate-400">
+            <p className="mt-3 text-sm text-slate-400">
               Cobertura nacional
             </p>
+
+            <Link
+              href="/#contacto"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sky-400 transition hover:text-sky-300"
+            >
+              Solicitar consultoría
+              <span>→</span>
+            </Link>
 
           </div>
 
         </div>
 
-        <div className="mt-16 border-t border-slate-800 pt-8">
+        {/* =====================================================
+            COPYRIGHT
+        ===================================================== */}
+        <div className="mt-12 border-t border-slate-800 pt-7">
 
-          <p className="text-center text-sm text-slate-500">
-            © {year} SYNERTEL GROUP S.A.C.S. Todos los derechos reservados.
-          </p>
+          <div className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left">
+
+            <p className="text-xs text-slate-500">
+              © {year} SYNERTEL GROUP S.A.C.S. Todos los derechos reservados.
+            </p>
+
+            <p className="text-xs text-slate-600">
+              Tecnología en Sinergia
+            </p>
+
+          </div>
 
         </div>
 

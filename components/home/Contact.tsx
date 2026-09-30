@@ -2,19 +2,12 @@ import Container from "@/components/layout/Container";
 
 export default function Contact() {
   return (
-    <section
-      id="contacto"
-      className="bg-slate-950 py-32"
-    >
+    <section id="contacto" className="bg-slate-950 py-32">
       <Container>
-
         <div className="grid gap-16 lg:grid-cols-2">
-
           {/* Información */}
-
           <div>
-
-            <p className="uppercase tracking-[0.35em] text-sky-400 font-semibold">
+            <p className="font-semibold uppercase tracking-[0.35em] text-sky-400">
               CONTACTO
             </p>
 
@@ -29,7 +22,6 @@ export default function Contact() {
             </p>
 
             <div className="mt-10 space-y-6">
-
               <div>
                 <p className="text-slate-400">Correo</p>
                 <p className="text-xl font-semibold text-white">
@@ -43,38 +35,44 @@ export default function Contact() {
                   Todo el Perú
                 </p>
               </div>
-
             </div>
-
           </div>
 
           {/* Formulario */}
-
-          <form className="rounded-3xl border border-slate-800 bg-slate-900 p-10">
-
+          <form
+            action="/api/contact"
+            method="POST"
+            className="rounded-3xl border border-slate-800 bg-slate-900 p-10"
+          >
             <div className="space-y-6">
-
               <input
                 type="text"
+                name="nombre"
                 placeholder="Nombre completo"
+                required
                 className="w-full rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none focus:border-sky-500"
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Correo electrónico"
+                required
                 className="w-full rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none focus:border-sky-500"
               />
 
               <input
                 type="text"
+                name="empresa"
                 placeholder="Empresa"
                 className="w-full rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none focus:border-sky-500"
               />
 
               <textarea
+                name="mensaje"
                 rows={6}
                 placeholder="Cuéntenos sobre su proyecto..."
+                required
                 className="w-full rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none focus:border-sky-500"
               />
 
@@ -84,13 +82,9 @@ export default function Contact() {
               >
                 Enviar consulta
               </button>
-
             </div>
-
           </form>
-
         </div>
-
       </Container>
     </section>
   );

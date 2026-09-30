@@ -4,9 +4,7 @@ export default function CTA() {
   return (
     <section className="bg-sky-600 py-24">
       <Container>
-
         <div className="text-center">
-
           <h2 className="text-5xl font-bold text-white">
             ¿Tiene un proyecto tecnológico?
           </h2>
@@ -18,7 +16,6 @@ export default function CTA() {
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-5">
-
             <a
               href="#contacto"
               className="rounded-xl bg-white px-8 py-4 text-lg font-semibold text-sky-700 transition hover:bg-slate-100"
@@ -32,11 +29,8 @@ export default function CTA() {
             >
               ventas@synertelgrp.com
             </a>
-
           </div>
-
         </div>
-
       </Container>
     </section>
   );

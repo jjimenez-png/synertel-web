@@ -51,15 +51,10 @@ const services = [
 
 export default function Capabilities() {
   return (
-    <section
-      id="capacidades"
-      className="bg-slate-900 py-28"
-    >
+    <section id="capacidades" className="bg-slate-900 py-28">
       <Container>
-
         <div className="text-center">
-
-          <p className="text-sky-400 uppercase tracking-[0.35em] font-semibold">
+          <p className="font-semibold uppercase tracking-[0.35em] text-sky-400">
             CAPACIDADES
           </p>
 
@@ -71,24 +66,18 @@ export default function Capabilities() {
             Diseñamos, implementamos e integramos soluciones de alto impacto
             para organizaciones públicas y privadas.
           </p>
-
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
           {services.map((service) => (
-
             <CapabilityCard
               key={service.title}
               icon={service.icon}
               title={service.title}
               description={service.description}
             />
-
           ))}
-
         </div>
-
       </Container>
     </section>
   );
